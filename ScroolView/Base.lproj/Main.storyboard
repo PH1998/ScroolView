@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zZc-IC-eIB">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ScroolView" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,552 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Marvel &amp; DC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lh1-0e-VQE">
+                                <rect key="frame" x="86" y="28" width="202" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHz-Pf-lkA">
+                                <rect key="frame" x="108" y="200" width="159" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Universos">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Xt8-Lq-Ixd" kind="show" id="WHn-dg-yn5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aps-Ux-GKq">
+                                <rect key="frame" x="108" y="270" width="159" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Homem Aranha"/>
+                                <connections>
+                                    <segue destination="fnV-p4-tok" kind="show" id="EgR-dN-oP3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ME-Wa-Uzn">
+                                <rect key="frame" x="108" y="410" width="159" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Batman"/>
+                                <connections>
+                                    <segue destination="nZ3-3h-7T4" kind="show" id="q5w-rP-En4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMY-hj-Vuo">
+                                <rect key="frame" x="108" y="478" width="159" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Superhomem"/>
+                                <connections>
+                                    <segue destination="FQF-Vi-hPd" kind="show" id="rfz-sU-0NX"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Universos Marvel &amp; DC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JjP-IR-Pc7">
+                                <rect key="frame" x="44" y="100" width="286" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ted-Av-9r7">
+                                <rect key="frame" x="108" y="339" width="159" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Demolidor"/>
+                                <connections>
+                                    <segue destination="3OU-2t-bqm" kind="show" id="y9T-jl-bpa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490570000003" green="0.34901961679999999" blue="0.1921568662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="dC8-au-Lvm"/>
+                    <value key="contentSizeForViewInPopover" type="size" width="377" height="667"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1056.8" y="123.68815592203899"/>
+        </scene>
+        <!--Universos-->
+        <scene sceneID="vbs-o0-NDj">
+            <objects>
+                <viewController title="Universos" id="Xt8-Lq-Ixd" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="x54-0Q-jdc"/>
+                        <viewControllerLayoutGuide type="bottom" id="C1V-JG-7Y5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zhe-8q-5RC">
+                        <rect key="frame" x="0.0" y="0.0" width="650" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F4L-GW-CV5">
+                                <rect key="frame" x="35" y="72" width="615" height="575"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Marvel" translatesAutoresizingMaskIntoConstraints="NO" id="lHi-3E-rgM">
+                                        <rect key="frame" x="21" y="-9" width="260" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="Fcp-4W-yDO"/>
+                                            <constraint firstAttribute="width" constant="260" id="HDm-Hd-wPK"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="DCComics" translatesAutoresizingMaskIntoConstraints="NO" id="jDt-SH-gGP">
+                                        <rect key="frame" x="307" y="-9" width="375" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="375" id="7dy-AW-ncX"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LrK-Gl-72u">
+                                        <rect key="frame" x="41" y="190" width="240" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">Marvel Comics é a linha editorial de banda desenhada ou história em quadrinhos da Marvel Entertainment, pertencente à Walt Disney Company ao ser comprada em 2009, por 4 bilhões de dólares. Com sede na 387 Park Avenue South, em Nova Iorque. </string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Dyv-tV-xxa">
+                                        <rect key="frame" x="297" y="190" width="240" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">A DC Entertainment é uma editora norte-americana de histórias em quadrinhos e mídias relacionadas, sendo considerada uma das maiores companhias, ligadas a este ramo no mundo.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="lHi-3E-rgM" firstAttribute="top" secondItem="F4L-GW-CV5" secondAttribute="top" constant="55" id="20c-rA-bAG"/>
+                                    <constraint firstItem="lHi-3E-rgM" firstAttribute="bottom" secondItem="jDt-SH-gGP" secondAttribute="bottom" id="4qJ-AY-0kx"/>
+                                    <constraint firstItem="lHi-3E-rgM" firstAttribute="top" secondItem="jDt-SH-gGP" secondAttribute="top" id="8Wo-e3-Z88"/>
+                                    <constraint firstItem="lHi-3E-rgM" firstAttribute="leading" secondItem="F4L-GW-CV5" secondAttribute="leading" constant="21" id="DBK-XJ-Lfz"/>
+                                    <constraint firstAttribute="trailing" secondItem="jDt-SH-gGP" secondAttribute="trailing" constant="-126" id="nfe-Bi-Upl"/>
+                                    <constraint firstAttribute="bottom" secondItem="lHi-3E-rgM" secondAttribute="bottom" constant="392" id="x2r-Ba-mio"/>
+                                    <constraint firstItem="jDt-SH-gGP" firstAttribute="leading" secondItem="lHi-3E-rgM" secondAttribute="trailing" constant="8" symbolic="YES" id="xoZ-gO-un0"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80392158030000005" green="0.80392158030000005" blue="0.80392158030000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="F4L-GW-CV5" firstAttribute="leading" secondItem="Zhe-8q-5RC" secondAttribute="leadingMargin" constant="15" id="4Qy-gp-WU0"/>
+                            <constraint firstAttribute="bottom" secondItem="F4L-GW-CV5" secondAttribute="bottom" constant="20" symbolic="YES" id="T33-We-5mx"/>
+                            <constraint firstItem="F4L-GW-CV5" firstAttribute="top" secondItem="x54-0Q-jdc" secondAttribute="bottom" constant="8" symbolic="YES" id="UWJ-Tr-c0Y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="F4L-GW-CV5" secondAttribute="trailing" constant="7" id="aoo-kk-WyA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="onj-zk-WEc"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="650" height="667"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1mG-Q4-W51" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2865.5999999999999" y="123.68815592203899"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="89m-HF-jk9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zZc-IC-eIB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sea-tp-5ON">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Mlq-tw-Jly"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zQi-vF-nHL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+        </scene>
+        <!--Homem Aranha-->
+        <scene sceneID="ETX-tW-Dkm">
+            <objects>
+                <viewController title="Homem Aranha" id="fnV-p4-tok" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NOp-Vn-Unv"/>
+                        <viewControllerLayoutGuide type="bottom" id="OSr-DK-O1o"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2f9-ZD-NZ8">
+                        <rect key="frame" x="0.0" y="0.0" width="1125" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x1R-OM-hqT">
+                                <rect key="frame" x="35" y="72" width="1063" height="575"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EBx-3O-A9g">
+                                        <rect key="frame" x="0.0" y="-56" width="1063" height="575"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HOmem Aranha 2" translatesAutoresizingMaskIntoConstraints="NO" id="TTx-y9-qCX">
+                                                <rect key="frame" x="8" y="287" width="375" height="128"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="375" id="krP-b6-SuM"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="q9q-aA-N4w">
+                                                <rect key="frame" x="482" y="423" width="1063" height="6"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="1063" id="2Ne-BX-oWg"/>
+                                                </constraints>
+                                                <string key="text">Marvel Comics é a linha editorial de banda desenhada ou história em quadrinhos da Marvel Entertainment, pertencente à Walt Disney Company ao ser comprada em 2009, por 4 bilhões de dólares. Com sede na 387 Park Avenue South, em Nova Iorque. </string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Homem Aranha 3" translatesAutoresizingMaskIntoConstraints="NO" id="SoN-jj-tEj">
+                                                <rect key="frame" x="796" y="287" width="240" height="128"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="240" id="OaE-dD-qxe"/>
+                                                    <constraint firstAttribute="height" constant="128" id="yEX-xT-thm"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1pX-fP-ZJH">
+                                                <rect key="frame" x="8" y="458" width="967" height="128"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <string key="text">O Homem-Aranha alter-ego de Peter Parker, é um personagem fictício, um super-herói que aparece nas revistas em quadrinhos americanas publicadas pela Marvel Comics, existindo no seu universo partilhado.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Homem Aranha1" translatesAutoresizingMaskIntoConstraints="NO" id="Yfu-uc-pH1">
+                                                <rect key="frame" x="449" y="287" width="260" height="128"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="128" id="4P9-YG-KXa"/>
+                                                    <constraint firstAttribute="width" constant="260" id="76v-RF-Gkm"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.80392158030000005" green="0.80392158030000005" blue="0.80392158030000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="1063" id="48O-tH-sCL"/>
+                                            <constraint firstAttribute="trailing" secondItem="SoN-jj-tEj" secondAttribute="trailing" constant="27" id="B3V-70-QmO"/>
+                                            <constraint firstItem="q9q-aA-N4w" firstAttribute="leading" secondItem="EBx-3O-A9g" secondAttribute="leading" constant="482" id="M7A-ZV-wHp"/>
+                                            <constraint firstItem="SoN-jj-tEj" firstAttribute="leading" secondItem="Yfu-uc-pH1" secondAttribute="trailing" constant="87" id="RPc-EB-0KF"/>
+                                            <constraint firstItem="Yfu-uc-pH1" firstAttribute="top" secondItem="EBx-3O-A9g" secondAttribute="top" constant="287" id="TC3-hv-3ld"/>
+                                            <constraint firstItem="TTx-y9-qCX" firstAttribute="leading" secondItem="EBx-3O-A9g" secondAttribute="leadingMargin" id="WuB-g0-Bfg"/>
+                                            <constraint firstItem="TTx-y9-qCX" firstAttribute="top" secondItem="Yfu-uc-pH1" secondAttribute="top" id="cBb-h3-jq4"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="q9q-aA-N4w" secondAttribute="bottom" constant="138" id="gPf-OK-k16"/>
+                                            <constraint firstItem="SoN-jj-tEj" firstAttribute="top" secondItem="Yfu-uc-pH1" secondAttribute="top" id="sRR-AC-ZIm"/>
+                                            <constraint firstItem="q9q-aA-N4w" firstAttribute="top" secondItem="TTx-y9-qCX" secondAttribute="bottom" constant="8" symbolic="YES" id="uwK-yo-xh6"/>
+                                            <constraint firstItem="TTx-y9-qCX" firstAttribute="bottom" secondItem="Yfu-uc-pH1" secondAttribute="bottom" id="xHH-9x-FbJ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="EBx-3O-A9g" secondAttribute="trailing" id="0bt-d3-1Sb"/>
+                                    <constraint firstItem="EBx-3O-A9g" firstAttribute="top" secondItem="x1R-OM-hqT" secondAttribute="top" id="G7L-IF-pcL"/>
+                                    <constraint firstItem="EBx-3O-A9g" firstAttribute="leading" secondItem="x1R-OM-hqT" secondAttribute="leading" id="eZi-f3-IVR"/>
+                                    <constraint firstItem="EBx-3O-A9g" firstAttribute="centerY" secondItem="x1R-OM-hqT" secondAttribute="centerY" id="jgQ-aR-dBy"/>
+                                    <constraint firstAttribute="bottom" secondItem="EBx-3O-A9g" secondAttribute="bottom" id="m6V-yv-pXF"/>
+                                </constraints>
+                                <inset key="scrollIndicatorInsets" minX="0.0" minY="-1" maxX="0.0" maxY="0.0"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="x1R-OM-hqT" firstAttribute="top" secondItem="NOp-Vn-Unv" secondAttribute="bottom" constant="8" symbolic="YES" id="DQb-ot-MXX"/>
+                            <constraint firstAttribute="bottom" secondItem="x1R-OM-hqT" secondAttribute="bottom" constant="20" symbolic="YES" id="bL4-fN-Njw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="x1R-OM-hqT" secondAttribute="trailing" constant="7" id="hog-7h-9tv"/>
+                            <constraint firstItem="x1R-OM-hqT" firstAttribute="leading" secondItem="2f9-ZD-NZ8" secondAttribute="leadingMargin" constant="15" id="t6c-3m-srp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="IlX-dw-TWO"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1125" height="667"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RLc-fB-l2S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2334" y="883"/>
+        </scene>
+        <!--DareDevil-->
+        <scene sceneID="z0g-j5-gsd">
+            <objects>
+                <viewController title="DareDevil" id="3OU-2t-bqm" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3lq-Aq-1at"/>
+                        <viewControllerLayoutGuide type="bottom" id="M7T-ty-jeC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ego-JE-fnc">
+                        <rect key="frame" x="0.0" y="0.0" width="1125" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oA4-k8-gyB">
+                                <rect key="frame" x="42" y="0.0" width="1063" height="619"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o20-a4-WbE">
+                                        <rect key="frame" x="0.0" y="-56" width="1063" height="575"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DD" translatesAutoresizingMaskIntoConstraints="NO" id="N1b-47-m4u">
+                                                <rect key="frame" x="8" y="287" width="375" height="128"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="375" id="H14-Uk-9wt"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DD3" translatesAutoresizingMaskIntoConstraints="NO" id="RWK-ww-8ub">
+                                                <rect key="frame" x="796" y="287" width="240" height="128"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="128" id="aL0-DY-vci"/>
+                                                    <constraint firstAttribute="width" constant="240" id="sEd-Rl-TYA"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ORA-PP-9eI">
+                                                <rect key="frame" x="8" y="458" width="967" height="128"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <string key="text">Daredevil é um personagem fictício que aparece nas histórias em quadrinhos publicadas pela Marvel Comics. Daredevil foi criado pelo escritor/editor Stan Lee e pelo artista Bill Everett, com algumas contribuições não especificadas por Jack Kirby. </string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DD2" translatesAutoresizingMaskIntoConstraints="NO" id="X4U-5p-K13">
+                                                <rect key="frame" x="449" y="287" width="260" height="128"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="260" id="Pxg-G9-viJ"/>
+                                                    <constraint firstAttribute="height" constant="128" id="W02-aK-h10"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.80392158030000005" green="0.80392158030000005" blue="0.80392158030000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="N1b-47-m4u" firstAttribute="bottom" secondItem="X4U-5p-K13" secondAttribute="bottom" id="0sX-LM-6Dh"/>
+                                            <constraint firstItem="N1b-47-m4u" firstAttribute="top" secondItem="X4U-5p-K13" secondAttribute="top" id="MJY-N6-UI8"/>
+                                            <constraint firstAttribute="width" constant="1063" id="MeJ-38-nJU"/>
+                                            <constraint firstItem="X4U-5p-K13" firstAttribute="top" secondItem="o20-a4-WbE" secondAttribute="top" constant="287" id="SSn-2w-CGn"/>
+                                            <constraint firstItem="RWK-ww-8ub" firstAttribute="top" secondItem="X4U-5p-K13" secondAttribute="top" id="XU7-gQ-yeP"/>
+                                            <constraint firstItem="N1b-47-m4u" firstAttribute="leading" secondItem="o20-a4-WbE" secondAttribute="leadingMargin" id="aic-Bx-Vhz"/>
+                                            <constraint firstItem="RWK-ww-8ub" firstAttribute="leading" secondItem="X4U-5p-K13" secondAttribute="trailing" constant="87" id="gaE-k8-Usi"/>
+                                            <constraint firstAttribute="trailing" secondItem="RWK-ww-8ub" secondAttribute="trailing" constant="27" id="hzP-Ig-sJb"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="o20-a4-WbE" secondAttribute="bottom" id="JGe-V5-D4v"/>
+                                    <constraint firstItem="o20-a4-WbE" firstAttribute="centerY" secondItem="oA4-k8-gyB" secondAttribute="centerY" id="YSH-KE-3c4"/>
+                                    <constraint firstAttribute="trailing" secondItem="o20-a4-WbE" secondAttribute="trailing" id="tNe-qt-j3M"/>
+                                    <constraint firstItem="o20-a4-WbE" firstAttribute="leading" secondItem="oA4-k8-gyB" secondAttribute="leading" id="tqZ-YI-EsX"/>
+                                    <constraint firstItem="o20-a4-WbE" firstAttribute="top" secondItem="oA4-k8-gyB" secondAttribute="top" id="wJK-dC-Y8c"/>
+                                </constraints>
+                                <inset key="scrollIndicatorInsets" minX="0.0" minY="-1" maxX="0.0" maxY="0.0"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oA4-k8-gyB" firstAttribute="leading" secondItem="ego-JE-fnc" secondAttribute="leadingMargin" constant="15" id="3ZA-do-TIS"/>
+                            <constraint firstAttribute="bottom" secondItem="oA4-k8-gyB" secondAttribute="bottom" constant="20" symbolic="YES" id="kRL-Tl-Xb5"/>
+                            <constraint firstItem="oA4-k8-gyB" firstAttribute="top" secondItem="3lq-Aq-1at" secondAttribute="bottom" constant="8" symbolic="YES" id="qbu-q7-6a2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oA4-k8-gyB" secondAttribute="trailing" constant="7" id="sIZ-jh-rSb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="BhW-xx-McW"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1125" height="667"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ol6-Ro-nlb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-110" y="950"/>
+        </scene>
+        <!--Batman-->
+        <scene sceneID="w3r-Ok-qv4">
+            <objects>
+                <viewController title="Batman" id="nZ3-3h-7T4" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nfv-as-Z7a"/>
+                        <viewControllerLayoutGuide type="bottom" id="bI4-VW-6WZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hql-zh-4p7">
+                        <rect key="frame" x="0.0" y="0.0" width="1125" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y3h-xo-FX8">
+                                <rect key="frame" x="42" y="0.0" width="1063" height="619"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8VL-Kb-vdB">
+                                        <rect key="frame" x="0.0" y="-56" width="1063" height="575"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bat1" translatesAutoresizingMaskIntoConstraints="NO" id="r93-ey-QjX">
+                                                <rect key="frame" x="8" y="287" width="375" height="128"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="375" id="Utq-CO-mAb"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bat3" translatesAutoresizingMaskIntoConstraints="NO" id="GUC-2h-K1S">
+                                                <rect key="frame" x="796" y="287" width="240" height="128"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="128" id="5HI-sn-Jqv"/>
+                                                    <constraint firstAttribute="width" constant="240" id="7hL-dN-1P8"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="v6B-vT-tFd">
+                                                <rect key="frame" x="8" y="458" width="967" height="128"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <string key="text">Batman é um personagem fictício, um super-herói da banda desenhada americana publicada pela DC Comics. Foi criado pelo escritor Bill Finger e pelo artista Bob Kane, e apareceu pela primeira vez na revista Detective Comics #27</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bat2" translatesAutoresizingMaskIntoConstraints="NO" id="Y3t-4d-cFa">
+                                                <rect key="frame" x="449" y="287" width="260" height="128"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="128" id="V0V-sF-tQ6"/>
+                                                    <constraint firstAttribute="width" constant="260" id="qJA-Gq-kvp"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.80392158030000005" green="0.80392158030000005" blue="0.80392158030000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="Y3t-4d-cFa" firstAttribute="top" secondItem="8VL-Kb-vdB" secondAttribute="top" constant="287" id="7ua-5P-fzc"/>
+                                            <constraint firstAttribute="width" constant="1063" id="Bho-kn-oLg"/>
+                                            <constraint firstItem="r93-ey-QjX" firstAttribute="leading" secondItem="8VL-Kb-vdB" secondAttribute="leadingMargin" id="Jrn-r7-Eda"/>
+                                            <constraint firstAttribute="trailing" secondItem="GUC-2h-K1S" secondAttribute="trailing" constant="27" id="Nt8-Qe-4hJ"/>
+                                            <constraint firstItem="r93-ey-QjX" firstAttribute="bottom" secondItem="Y3t-4d-cFa" secondAttribute="bottom" id="QkA-H1-T8p"/>
+                                            <constraint firstItem="GUC-2h-K1S" firstAttribute="top" secondItem="Y3t-4d-cFa" secondAttribute="top" id="XC3-He-T21"/>
+                                            <constraint firstItem="GUC-2h-K1S" firstAttribute="leading" secondItem="Y3t-4d-cFa" secondAttribute="trailing" constant="87" id="a6X-Mr-ZyR"/>
+                                            <constraint firstItem="r93-ey-QjX" firstAttribute="top" secondItem="Y3t-4d-cFa" secondAttribute="top" id="dhx-5u-BFg"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="8VL-Kb-vdB" firstAttribute="centerY" secondItem="Y3h-xo-FX8" secondAttribute="centerY" id="0sz-y4-BZG"/>
+                                    <constraint firstItem="8VL-Kb-vdB" firstAttribute="top" secondItem="Y3h-xo-FX8" secondAttribute="top" id="5M1-2N-GwG"/>
+                                    <constraint firstAttribute="trailing" secondItem="8VL-Kb-vdB" secondAttribute="trailing" id="Itq-59-fRL"/>
+                                    <constraint firstAttribute="bottom" secondItem="8VL-Kb-vdB" secondAttribute="bottom" id="N9v-Wq-PaM"/>
+                                    <constraint firstItem="8VL-Kb-vdB" firstAttribute="leading" secondItem="Y3h-xo-FX8" secondAttribute="leading" id="vQD-VO-FMy"/>
+                                </constraints>
+                                <inset key="scrollIndicatorInsets" minX="0.0" minY="-1" maxX="0.0" maxY="0.0"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Y3h-xo-FX8" secondAttribute="trailing" constant="7" id="4Nl-K8-RkV"/>
+                            <constraint firstAttribute="bottom" secondItem="Y3h-xo-FX8" secondAttribute="bottom" constant="20" symbolic="YES" id="TOy-yt-fap"/>
+                            <constraint firstItem="Y3h-xo-FX8" firstAttribute="top" secondItem="Nfv-as-Z7a" secondAttribute="bottom" constant="8" symbolic="YES" id="dHG-bX-7y8"/>
+                            <constraint firstItem="Y3h-xo-FX8" firstAttribute="leading" secondItem="hql-zh-4p7" secondAttribute="leadingMargin" constant="15" id="pIw-j3-i79"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="DjI-vu-5Lh"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1125" height="667"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dao-Bw-gUV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-111" y="1654"/>
+        </scene>
+        <!--Superman-->
+        <scene sceneID="Ld8-Ij-Eqx">
+            <objects>
+                <viewController title="Superman" id="FQF-Vi-hPd" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NY0-fT-gOI"/>
+                        <viewControllerLayoutGuide type="bottom" id="0d7-41-fmP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h7c-aK-OQe">
+                        <rect key="frame" x="0.0" y="0.0" width="1125" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gE8-Bw-czp">
+                                <rect key="frame" x="42" y="0.0" width="1063" height="619"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aOW-0I-QoH">
+                                        <rect key="frame" x="0.0" y="-56" width="1063" height="575"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Super1" translatesAutoresizingMaskIntoConstraints="NO" id="2d6-Jx-J18">
+                                                <rect key="frame" x="8" y="287" width="375" height="128"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="375" id="cbH-Pk-LT1"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bat3" highlightedImage="Super3" translatesAutoresizingMaskIntoConstraints="NO" id="KVR-sb-9lk">
+                                                <rect key="frame" x="796" y="287" width="240" height="128"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="128" id="3VS-YA-xiF"/>
+                                                    <constraint firstAttribute="width" constant="240" id="VqQ-ud-53Q"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dL5-Zx-Mdn">
+                                                <rect key="frame" x="8" y="458" width="967" height="128"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <string key="text">Super-homem é um super-herói fictício de história em quadrinhos americanas publicado pela DC Comics, uma empresa subsidiária do grupo Time Warner.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Super2" translatesAutoresizingMaskIntoConstraints="NO" id="lza-bA-8lg">
+                                                <rect key="frame" x="449" y="287" width="260" height="128"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="128" id="7uC-3z-l4c"/>
+                                                    <constraint firstAttribute="width" constant="260" id="XsA-pH-8oJ"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.80392158030000005" green="0.80392158030000005" blue="0.80392158030000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="lza-bA-8lg" firstAttribute="top" secondItem="aOW-0I-QoH" secondAttribute="top" constant="287" id="BhJ-bA-RZU"/>
+                                            <constraint firstAttribute="trailing" secondItem="KVR-sb-9lk" secondAttribute="trailing" constant="27" id="BjJ-cB-IEe"/>
+                                            <constraint firstItem="KVR-sb-9lk" firstAttribute="leading" secondItem="lza-bA-8lg" secondAttribute="trailing" constant="87" id="QMt-Ok-lqM"/>
+                                            <constraint firstAttribute="width" constant="1063" id="XIC-Ou-7oe"/>
+                                            <constraint firstItem="2d6-Jx-J18" firstAttribute="bottom" secondItem="lza-bA-8lg" secondAttribute="bottom" id="YtO-3p-ECK"/>
+                                            <constraint firstItem="2d6-Jx-J18" firstAttribute="top" secondItem="lza-bA-8lg" secondAttribute="top" id="ZPH-dM-iH2"/>
+                                            <constraint firstItem="KVR-sb-9lk" firstAttribute="top" secondItem="lza-bA-8lg" secondAttribute="top" id="jaD-EQ-1Sp"/>
+                                            <constraint firstItem="2d6-Jx-J18" firstAttribute="leading" secondItem="aOW-0I-QoH" secondAttribute="leadingMargin" id="s6H-sU-3CZ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="aOW-0I-QoH" firstAttribute="centerY" secondItem="gE8-Bw-czp" secondAttribute="centerY" id="1Vk-A6-Bgr"/>
+                                    <constraint firstAttribute="trailing" secondItem="aOW-0I-QoH" secondAttribute="trailing" id="3Yl-9Q-UwJ"/>
+                                    <constraint firstItem="aOW-0I-QoH" firstAttribute="top" secondItem="gE8-Bw-czp" secondAttribute="top" id="6fa-aw-4Ll"/>
+                                    <constraint firstItem="aOW-0I-QoH" firstAttribute="leading" secondItem="gE8-Bw-czp" secondAttribute="leading" id="MVY-Ja-rdq"/>
+                                    <constraint firstAttribute="bottom" secondItem="aOW-0I-QoH" secondAttribute="bottom" id="d6R-Hb-DN1"/>
+                                </constraints>
+                                <inset key="scrollIndicatorInsets" minX="0.0" minY="-1" maxX="0.0" maxY="0.0"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gE8-Bw-czp" firstAttribute="leading" secondItem="h7c-aK-OQe" secondAttribute="leadingMargin" constant="15" id="7ZI-Rt-PGa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gE8-Bw-czp" secondAttribute="trailing" constant="7" id="EA9-cs-q1Q"/>
+                            <constraint firstItem="gE8-Bw-czp" firstAttribute="top" secondItem="NY0-fT-gOI" secondAttribute="bottom" constant="8" symbolic="YES" id="Zu2-rZ-EcA"/>
+                            <constraint firstAttribute="bottom" secondItem="gE8-Bw-czp" secondAttribute="bottom" constant="20" symbolic="YES" id="fA4-Jy-RvL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="qCy-X2-Ahj"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1125" height="667"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dCn-m3-g4v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2334" y="1689"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Bat1" width="1920" height="1080"/>
+        <image name="Bat2" width="688" height="361"/>
+        <image name="Bat3" width="1920" height="1080"/>
+        <image name="DCComics" width="800" height="450"/>
+        <image name="DD" width="900" height="450"/>
+        <image name="DD2" width="800" height="578"/>
+        <image name="DD3" width="940" height="529"/>
+        <image name="HOmem Aranha 2" width="600" height="255"/>
+        <image name="Homem Aranha 3" width="600" height="378"/>
+        <image name="Homem Aranha1" width="960" height="738"/>
+        <image name="Marvel" width="1508" height="754"/>
+        <image name="Super1" width="575" height="431"/>
+        <image name="Super2" width="1900" height="900"/>
+        <image name="Super3" width="800" height="450"/>
+    </resources>
 </document>
